@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Wave Chuang — Capital Project Leader. Bridging engineering precision with financial insight. $1.2B+ delivered. Chemical &amp; Automotive. PMP, Agile, AI-enabled delivery." />
   <title>Wave Chuang — Capital Project Leader</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -38,6 +39,10 @@
       line-height: 1.7;
       overflow-x: hidden;
       cursor: none;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      body { cursor: auto; }
+      #c-dot, #c-ring { display: none; }
     }
 
     /* Blueprint grid */
@@ -451,6 +456,10 @@
       object-fit: contain;
       filter: grayscale(15%);
       opacity: .9;
+      background: #fff;
+      padding: 6px;
+      border-radius: 6px;
+      box-sizing: content-box;
     }
     .tl-list { list-style: none; display: flex; flex-direction: column; gap: .75rem; }
     .tl-list li {
@@ -552,10 +561,24 @@
       padding: .9rem 0; border-bottom: 1px solid rgba(255,255,255,.05);
     }
     .cert-item:last-child { border-bottom: none; }
+    .cert-item--with-logo { align-items: center; }
+    .cert-logo {
+      width: 36px; height: 36px;
+      object-fit: contain;
+      flex-shrink: 0;
+      opacity: .92;
+    }
+    .cert-item--with-logo .cert-logo {
+      background: #fff;
+      padding: 4px;
+      border-radius: 4px;
+      box-sizing: content-box;
+    }
     .cert-pip {
       width: 6px; height: 6px; background: var(--gold);
       flex-shrink: 0; margin-top: .35rem;
     }
+    .cert-item--with-logo .cert-pip { display: none; }
     .cert-name {
       font-family: 'Barlow', sans-serif;
       font-size: .86rem; font-weight: 300;
@@ -638,6 +661,12 @@
     }
     .reveal.vis { opacity: 1; transform: none; }
 
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; transition: none; }
+      .hero-eyebrow, .hero-name, .hero-sub, .hero-tagline, .hero-actions, .hero-scroll-indicator { animation: none; opacity: 1; }
+      .tl-item { opacity: 1; transform: none; }
+    }
+
     /* ─── RESPONSIVE ─── */
     @media (max-width: 900px) {
       .stats-row { grid-template-columns: repeat(2,1fr); }
@@ -663,9 +692,9 @@
 <div id="c-ring"></div>
 
 <!-- ── NAV ── -->
-<nav id="nav">
-  <a href="#hero" class="nav-logo">WC</a>
-  <ul class="nav-links">
+<nav id="nav" aria-label="Main navigation">
+  <a href="#hero" class="nav-logo" aria-current="page">WC</a>
+  <ul class="nav-links" role="list">
     <li><a href="#about">About<span class="zh">關於我</span></a></li>
     <li><a href="#skills">Skills<span class="zh">職能專長</span></a></li>
     <li><a href="#experience">Experience<span class="zh">工作經歷</span></a></li>
@@ -675,8 +704,9 @@
   </ul>
 </nav>
 
+<main>
 <!-- ── HERO ── -->
-<section id="hero">
+<section id="hero" aria-label="Introduction">
   <canvas id="hero-canvas"></canvas>
   <div class="hero-glow"></div>
   <div class="hero-inner">
@@ -729,13 +759,13 @@
 </div>
 
 <!-- ── ABOUT ── -->
-<section id="about">
+<section id="about" aria-labelledby="sec-about-title">
   <div class="wrap">
     <div class="sec-head reveal">
       <div class="sec-num">01</div>
       <div class="sec-meta">
         <div class="sec-eyebrow">Profile</div>
-        <h2 class="sec-title">
+        <h2 id="sec-about-title" class="sec-title">
           Professional Summary
           <span class="zh">專業摘要</span>
         </h2>
@@ -744,18 +774,19 @@
     </div>
     <div class="about-grid">
       <div class="about-prose reveal">
-        A PMP-certified project manager and certified industrial engineer with deep technical expertise
-        and sharp financial insight. Beyond a chemical engineering foundation, he specializes
-        in <em>CAPEX/OPEX planning</em>, <em>project pre-planning</em>, <em>risk mitigation</em>,
-        and <em>stakeholder alignment</em> within complex global matrix organizations.
+        A PMP-certified project manager and certified industrial engineer with deep technical expertise,
+        sharp financial insight, and advanced AI literacy. Beyond his chemical engineering background,
+        he uses AI to augment project management and stakeholder alignment within complex matrix
+        organizations, while applying agile project management methods to drive <em>CAPEX/OPEX planning</em>,
+        <em>project pre-planning</em>, and <em>risk mitigation</em>.
         <br><br>
-        Renowned for driving process innovation, he brings a rare blend of
-        <em>strategic vision</em> and <em>executional strength</em> — from billion-dollar
-        greenfield petrochemical complexes to precision fine chemical facilities spanning
-        three continents.
+        Renowned for driving process and delivery innovation through AI-enabled and agile workflows,
+        he brings a rare blend of <em>strategic vision</em>, <em>executional strength</em>, and
+        <em>data-driven decision making</em> — from billion-dollar greenfield petrochemical complexes
+        to precision fine chemical facilities spanning three continents.
         <span class="zh">
-          具備 PMP 國際專案管理師與工業工程師專業資格，專長於 CAPEX／OPEX 規劃、前期專案策劃、風險控管與利害關係人協調。
-          長期在跨國矩陣組織中推動流程創新，從十億等級石化新建案到精細化學產線，兼具戰略視野與扎實執行力。
+          具備 PMP 與工業工程師資格及進階 AI 素養，以 AI 強化專案管理與利害關係人對齊，並以敏捷方法推動資本／營運規劃與風險控管。
+          以 AI 與敏捷工作流推動流程與交付創新，兼具戰略視野、執行力與數據驅動決策，橫跨石化新建案與精細化學產線。
         </span>
       </div>
       <div class="info-card reveal">
@@ -770,7 +801,7 @@
           </div>
           <div class="info-row">
             <span class="info-row-label">Phone</span>
-            <span class="info-row-val">(+886) 920 860 193</span>
+            <span class="info-row-val">(+886) 920860193</span>
           </div>
           <div class="info-row">
             <span class="info-row-label">Location</span>
@@ -779,8 +810,8 @@
           <div class="info-row">
             <span class="info-row-label">LinkedIn</span>
             <span class="info-row-val">
-              <a href="https://www.linkedin.com/in/wei-fu-chuang-pmp-a8a7b787/" target="_blank" rel="noopener">
-                wei-fu-chuang
+              <a href="https://www.linkedin.com/in/wei-fu-chuang-a8a7b787/" target="_blank" rel="noopener">
+                wei-fu-chuang-a8a7b787
               </a>
             </span>
           </div>
@@ -1011,6 +1042,14 @@
               Managed a cross-functional team of 10+ engineers and coordinated multiple suppliers to deliver scalable solutions on time and within budget.
               <span class="zh">管理 10 位以上跨職能工程團隊並協調多家供應商，準時且在預算內交付可擴充的技術解決方案。</span>
             </li>
+            <li>
+              Used AI-enabled workflows to turn requirement documents and API lists into structured, traceable task lists, aligning development with integration and delivery milestones.
+              <span class="zh">以 AI 工作流將需求文件與 API 清單轉為可追蹤的結構化任務，對齊開發與整合、交付里程碑。</span>
+            </li>
+            <li>
+              Used AI to build virtual teammate profiles and support people-management decisions, including mentoring, role planning, and team scenario simulation.
+              <span class="zh">運用 AI 建立虛擬隊友輪廓，支援 mentoring、職涯規劃與團隊情境模擬等人管決策。</span>
+            </li>
           </ul>
         </div>
       </div>
@@ -1108,7 +1147,10 @@
               <span class="zh">主導環評與排放控制策略，協調美國工兵團土地使用許可。</span>
             </li>
             <li>
-              Delivered EPC construction with zero change orders and on-time completion, maintaining zero casualties or near-misses.</li>
+              Delivered EPC construction with zero change orders and on-time completion, maintaining zero casualties or near-misses.
+              <span class="zh">EPC 施工零變更、如期完成，零工安事故與虛驚事件。</span>
+            </li>
+          </ul>
         </div>
       </div>
 
@@ -1155,8 +1197,8 @@
         </div>
         <div class="proj-loc">Taiwan</div>
         <div class="proj-desc">
-          Delivered comprehensive cost analysis and execution roadmap enabling the Global Capital Investment Committee to reach a confident Final Investment Decision.
-          <span class="zh">提交完整成本分析與執行路線圖，協助全球資本投資委員會作出明確投資決策。</span>
+          Delivered comprehensive cost analysis and execution roadmap for a new fine-chemical production line supplying TSMC's advanced-node technologies, enabling the Global Capital Investment Committee to reach a confident Final Investment Decision.
+          <span class="zh">為供應台積電先進製程之精細化學品產線提交完整成本分析與執行路線圖，協助全球資本投資委員會作出明確投資決策。</span>
         </div>
       </div>
 
@@ -1183,8 +1225,8 @@
         </div>
         <div class="proj-loc">Taiwan</div>
         <div class="proj-desc">
-          Led the complete project lifecycle from R&amp;D to on-stream delivery for a first-of-its-kind specialty materials production line.
-          <span class="zh">從研發到正式投產，完整主導首條特殊材料量產產線建置。</span>
+          Designed and delivered a fully self-developed, state-of-the-art skid-mounted production line supplying TSMC advanced-node materials, including high-purity electronic specialty chemicals and the associated supply system design and construction, from R&amp;D concept to on-stream.
+          <span class="zh">從研發概念到投產，自主設計並交付供應台積電先進製程之特殊材料產線，含高純度電子特用化學品與供應系統設計施工。</span>
         </div>
       </div>
 
@@ -1256,14 +1298,16 @@
           Professional Certifications
           <span class="zh">專業證照</span>
         </h3>
-        <div class="cert-item">
+        <div class="cert-item cert-item--with-logo">
+          <img class="cert-logo" src="resource/PMP_project_management_professional_certification_badge.png" alt="PMP Project Management Professional certification badge" />
           <div class="cert-pip"></div>
           <div class="cert-name">
             Project Management Professional (PMP), PMI
             <span class="zh">國際專案管理師（PMP），美國專案管理學會 PMI</span>
           </div>
         </div>
-        <div class="cert-item">
+        <div class="cert-item cert-item--with-logo">
+          <img class="cert-logo" src="resource/certifiedIndustrialEngineer.png" alt="Certified Industrial Engineer" />
           <div class="cert-pip"></div>
           <div class="cert-name">
             Certified Industrial Engineer (CIIE)
@@ -1291,7 +1335,8 @@
             <span class="zh">環保署甲級廢棄物處理技術人員</span>
           </div>
         </div>
-        <div class="cert-item">
+        <div class="cert-item cert-item--with-logo">
+          <img class="cert-logo" src="resource/Microsoft_logo.svg" alt="Microsoft Certified" />
           <div class="cert-pip"></div>
           <div class="cert-name">
             Microsoft Certified: Azure Administrator Associate
@@ -1340,15 +1385,15 @@
         <div class="c-row">
           <span class="c-row-label">Phone</span>
           <span class="c-row-val">
-            (+886) 920 860 193
+            (+886) 920860193
             <span class="zh">行動電話</span>
           </span>
         </div>
         <div class="c-row">
           <span class="c-row-label">LinkedIn</span>
           <span class="c-row-val">
-            <a href="https://www.linkedin.com/in/wei-fu-chuang-pmp-a8a7b787/" target="_blank" rel="noopener">
-              linkedin.com/in/wei-fu-chuang
+            <a href="https://www.linkedin.com/in/wei-fu-chuang-a8a7b787/" target="_blank" rel="noopener">
+              linkedin.com/in/wei-fu-chuang-a8a7b787
             </a>
             <span class="zh">LinkedIn 個人頁面</span>
           </span>
@@ -1364,6 +1409,7 @@
     </div>
   </div>
 </section>
+</main>
 
 <footer>
   <div class="footer-copy">© 2025 Wave Chuang. All rights reserved.</div>
