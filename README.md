@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Wave.C Homepage
 
 個人首頁 / 作品集頁面。
@@ -14,3 +15,7 @@
 ## 同步到 GitHub
 
 請參考下方「同步到 GitHub」步驟。
+=======
+# Homepageproject
+create a personal brand page
+>>>>>>> 66c4cb50f062c343a1066c17704aef1f0234a4d2
