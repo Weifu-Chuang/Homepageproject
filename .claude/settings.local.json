@@ -1,8 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(npx:*)",
-      "WebFetch(domain:support.claude.com)"
-    ]
-  }
-}
