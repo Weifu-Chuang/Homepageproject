@@ -13,7 +13,7 @@
 
 直接用瀏覽器開啟 `index.html` 或使用任意靜態伺服器即可。
 
-網頁連結  [Wave Chuang — Capital Project Leader](https://weifu-chuang.github.io/Homepageproject/)
+網頁連結(Link)  [Wave Chuang — Capital Project Leader](https://weifu-chuang.github.io/Homepageproject/)
 
 ## 同步到 GitHub
 
