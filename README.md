@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 # Wave.C Homepage
 
 個人首頁 / 作品集頁面。
