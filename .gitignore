@@ -1,0 +1,13 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Optional: 若不想把某些檔案推上去，可在此列出
